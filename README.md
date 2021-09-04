@@ -1,5 +1,6 @@
-# vue-typescript
 
+# Introduction to vue-typescript
+This app manages a todo list
 ## Project setup
 ```
 npm install
