@@ -3,10 +3,12 @@
   <div class="todo-card">
     <input  type="text" v-model="inputValue" />
     <button @click="addToDo">Add</button>
-    <ul id="todo-list" v-for="todo in todos" :key="todo">
-      <li>{{todo}}</li>
-      <button @click="removeTodo">X</button>
-    </ul>
+    <div id="todo-card">
+      <ul  v-for="todo in todos" :key="todo">
+        <li>{{todo}}</li>
+        <button @click="removeTodo">X</button>
+      </ul>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -32,7 +34,7 @@ export default class ToDo extends Vue {
 </script>
 
 <style scoped>
-#todo-list{
+#todo-card{
   border: #2c3e50 solid;
   width: auto;
   text-align: center;
