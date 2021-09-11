@@ -1,6 +1,5 @@
 <template>
   <ToDo/>
-
 </template>
 
 <script lang="ts">

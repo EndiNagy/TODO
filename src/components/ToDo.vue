@@ -1,20 +1,20 @@
 <template>
   <h1>TODO app</h1>
-  <div class="todo-card">
-    <input  type="text" v-model="inputValue" />
-    <button @click="addToDo" class="btn btn-primary" >Add</button>
-    <div id="todo-card">
-      <ul  v-for="todo in todos" :key="todo">
-        
-        <li>
-          <label for="">{{todo}}</label>
-          <button @click="removeTodo" class="btn btn-danger">
-            <i class="bi bi-x-lg"/>
-          </button>
-        </li>
-        
-      </ul>
+  <form >
+    <div class="input-group">
+      <input  type="text" v-model="inputValue"  class="form-control"/>
+      <button @click="addToDo" class="btn btn-primary input-group-append">Add</button>
     </div>
+  </form>
+  <div>
+    <ul  v-for="todo in todos" :key="todo" class="list-group">
+      <li class="list-group-item">
+        <label for="">{{todo}}</label>
+        <button @click="removeTodo" class="btn btn-danger btn-sm">
+          <i class="bi bi-x-lg"/>
+        </button>
+      </li>
+    </ul>
   </div>
 </template>
 <script lang="ts">
@@ -40,9 +40,4 @@ export default class ToDo extends Vue {
 </script>
 
 <style scoped>
-#todo-card{
-  border: #2c3e50 solid;
-  width: auto;
-  text-align: center;
-}
 </style>
