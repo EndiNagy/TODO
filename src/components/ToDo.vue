@@ -2,7 +2,7 @@
   <h1>TODO app</h1>
   <div class="todo-card">
     <input  type="text" v-model="inputValue" />
-    <button @click="addToDo">Add</button>
+    <button @click="addToDo" class="btn btn-primary">Add</button>
     <div id="todo-card">
       <ul  v-for="todo in todos" :key="todo">
         
