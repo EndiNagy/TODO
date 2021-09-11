@@ -2,14 +2,16 @@
   <h1>TODO app</h1>
   <div class="todo-card">
     <input  type="text" v-model="inputValue" />
-    <button @click="addToDo" class="btn btn-primary">Add</button>
+    <button @click="addToDo" >Add</button>
     <div id="todo-card">
       <ul  v-for="todo in todos" :key="todo">
         
         <li>
           <label for="">{{todo}}</label>
-          <button @click="removeTodo">X</button>
-          </li>
+          <button @click="removeTodo">
+            <i class="bi bi-x-lg"/>
+          </button>
+        </li>
         
       </ul>
     </div>
