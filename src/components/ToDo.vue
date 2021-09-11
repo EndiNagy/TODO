@@ -5,8 +5,12 @@
     <button @click="addToDo">Add</button>
     <div id="todo-card">
       <ul  v-for="todo in todos" :key="todo">
-        <li>{{todo}}</li>
-        <button @click="removeTodo">X</button>
+        
+        <li>
+          <label for="">{{todo}}</label>
+          <button @click="removeTodo">X</button>
+          </li>
+        
       </ul>
     </div>
   </div>
