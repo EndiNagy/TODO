@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="onSubmit">
     <div class="input-group">
-      <input  type="text" v-model="newTodo" placeholder="Create new todo"  class="form-control"/>
+      <input  type="text" v-model.trim="newTodo" placeholder="Create new todo"  class="form-control"/>
       <button type="submit" class="btn btn-primary input-group-append">Add</button>
     </div>
   </form>
