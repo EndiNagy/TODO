@@ -6,6 +6,7 @@
       <button @click="addToDo" class="btn btn-primary input-group-append">Add</button>
     </div>
   </form>
+  
   <div>
     <ul  v-for="todo in todos" :key="todo" class="list-group">
       <li class="list-group-item">

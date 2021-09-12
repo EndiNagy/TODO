@@ -4,12 +4,10 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
-import ToDo from "./components/ToDo.vue"
+import ToDo from "./views/ToDo.vue"
 
 @Options({
   components: {
-    HelloWorld,
     ToDo
   },
 })
