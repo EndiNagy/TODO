@@ -1,11 +1,6 @@
 <template>
   <h1>TODO app</h1>
-  <form >
-    <div class="input-group">
-      <input  type="text" v-model="inputValue"  class="form-control"/>
-      <button @click="addToDo" class="btn btn-primary input-group-append">Add</button>
-    </div>
-  </form>
+  <new-todo-form/>
   
   <div>
     <ul  v-for="todo in todos" :key="todo" class="list-group">
@@ -19,8 +14,14 @@
   </div>
 </template>
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { Vue, Options } from "vue-class-component";
+import NewTodoForm from "../components/NewTodoForm.vue"
 
+@Options({
+  components: {
+    NewTodoForm
+  }
+})
 export default class ToDo extends Vue {
   inputValue = "Note ToDo here"
   todos: string[] = ["Be awesome", "Work out"]
@@ -39,6 +40,3 @@ export default class ToDo extends Vue {
   }
 }
 </script>
-
-<style scoped>
-</style>
