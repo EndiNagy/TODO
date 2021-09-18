@@ -3,10 +3,10 @@
   <new-todo-form @onSubmittedTodo="appendToDo"/>
   
   <div>
-    <ul  v-for="todo in todos" :key="todo" class="list-group">
+    <ul  v-for="(todo, index) in todos" :key="index" class="list-group">
       <li class="list-group-item">
         <label for="">{{todo}}</label>
-        <button @click="removeTodo" class="btn btn-danger btn-sm">
+        <button @click="removeTodo(index)" class="btn btn-danger btn-sm">
           <i class="bi bi-x-lg"/>
         </button>
       </li>
@@ -29,8 +29,9 @@ export default class ToDo extends Vue {
   public appendToDo (todo:string){
     this.todos.push(todo)
   }
-  public removeTodo(){
-    console.log(`Remove `)
+
+  public removeTodo(index: number){
+    this.todos.splice(index, 1)
   }
 }
 </script>
